@@ -1,0 +1,21 @@
+body {
+ background: #000 url('../back/moon11bk_gr.jpg') fixed;
+}
+
+th, td {
+ white-space: nowrap;
+}
+
+table div.number {
+ text-align: right;
+ font-size: 75%;
+}
+
+table div.result {
+ font-size: 140%;
+}
+
+td {
+ text-align: center;
+ padding: 0 1em;
+}

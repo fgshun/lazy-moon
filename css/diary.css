@@ -1,0 +1,63 @@
+body {
+ padding-left: 0px;
+ background: #000;
+}
+
+div#content {
+ position: absolute;
+ top: 0px;
+ left: 9em;
+ padding: 0.5em;
+ border-left: 10px double #999;
+}
+
+div#index {
+ position: absolute;
+ position: fixed;
+ top: 0px;
+ left: 0px;
+ width: 8.5em;
+ padding: 0.5em;
+}
+
+
+div.diary {
+background: url("../back/moon6-bl.png") no-repeat top left scroll;
+padding-left: 10px;
+}
+
+
+h1 {
+ color: #FF6;
+ background: #000 url('../back/moonchain_bk_pur.jpg') repeat-x;
+}
+
+
+h2 {
+ color: #9FF;
+}
+
+h3 {
+ color: #FF0;
+ margin-top: 0em;
+}
+
+h4 {
+ color: #F99;
+}
+
+div#index h1 {
+ background: #000;
+ font-size: 105%;
+ padding: 0.1em 0.1em;
+}
+
+div#index h2 {
+ font-size: 105%;
+ margin-top: 1em;
+}
+
+div#index p {
+ margin: 0.5ex 1em;
+ line-height: 105%;
+}
