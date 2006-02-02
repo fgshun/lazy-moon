@@ -46,11 +46,11 @@ p.link {
 }
 
 a:link {
- color: #F99;
+ color: #69F;
 }
 
 a:visited{
- color: #99F;
+ color: #B090B0;
 }
 
 a:link:hover, a:visited:hover {
