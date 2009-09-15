@@ -8,11 +8,11 @@
 <meta http-equiv="Content-Style-Type" content="text/css" />
 
 <link rel="Stylesheet" type="text/css" href="/css/shun.css" />
-<title>自作ソフト置き場</title>
+<title>ソフトウェア置き場</title>
 </head>
 
-<h1>自作ソフト置き場</h1>
-<h2>Python ライブラリ</h2>
+<h1>ソフトウェア置き場</h1>
+<h2>自作 Python ライブラリ</h2>
 <h3>aquestalk_py</h3>
 <p><a href="http://www.a-quest.com/aquestalk/">Aquestalk Win 版</a>を Python から使用します。</p>
 <ul>
@@ -25,22 +25,47 @@
     <li><a href="reflexa_py/reflexa_py_0_3_1.zip">reflexa_py Version 0.3.1</a></li>
 </ul>
 
-<h3>mecab-python</h3>
-<p>Windows XP にて MeCab 0.98pre3 の Python バインディングをコンパイルしてみました。</p>
-<p>libmecab.dll, mecab-python, IPA 辞書の3つを組にして使ってください</p>
+<h3>PyAviUtlControl</h3>
+<p>あじ氏の「<a href="http://www.geocities.jp/aji_0/">AviUtl Control</a> ver1.4」を使用することで AviUtl を Python から操作します。</p>
+<ul>
+    <li><a href="aviutl/pyauc_ver11.zip">PyAviUtlControl Version 1.1</a></li>
+    <li><a href="aviutl/pyauc_ver10.zip">PyAviUtlControl Version 1.0</a></li>
+</ul>
+
+<h3>PyAviUtl</h3>
+<p>AviUtl を Python から操作します。 PyAviUtlControl との違いはこれ単体で動作するということです。</p>
+<p>あじ氏の「<a href="http://www.geocities.jp/aji_0/">AviUtl Control</a> ver1.4」のソースコードを参考に作成しています。できあがったばかりのものであり 、動作確認が済んでいません。</p>
+<ul>
+    <li><a href="aviutl/pyaviutl_ver01alpha.zip">PyAviUtl Version 0.1alpha</a></li>
+</ul>
+
+
+<h2>その他</h2>
+<h3>mecab-python 0.98pre3 の Windows 用バイナリ</h3>
+<p>Windows XP にて <a href="http://mecab.sourceforge.net/">MeCab</a> 0.98pre3 の Python バインディングをコンパイルしてみました。</p>
 <ul>
     <li><a href="mecab-python/libmecab-1-mecab-0.98pre3.zip">libmecab-1.dll</a></li>
     <li><a href="mecab-python/mecab-python-0.98pre3-python254.zip">mecab-python Python 2.5.4 用</a></li>
 <li><a href="mecab-python/mecab-python-0.98pre3-python262.zip">mecab-python Python 2.6.2 用</a></li>
     <li><a href="mecab-python/mecab-ipadic-2.7.0-20070801.zip">IPA辞書(UTF-8)</a></li>
 </ul>
-
-<h3>AviUtl Control for Python</h3>
-<p>あじ氏の「<a href="http://www.geocities.jp/aji_0/">AviUtl Control</a> ver1.4」を Python から使用します。</p>
-<ul>
-    <li><a href="aviutl/pyauc_ver11.zip">AviUtl Control for Python Version 1.1</a></li>
-    <li><a href="aviutl/pyauc_ver10.zip">AviUtl Control for Python Version 1.0</a></li>
-</ul>
+<p>libmecab.dll, mecab-python, IPA 辞書の3つと mecabrc を組にして使ってください。 mecabrc は空のファイルでかまいませんが、辞書を指定しておくと便利です。</p>
+<pre><code>dicdir = ipadic</code></pre>
+<p>以下は簡単な使用例です。</p>
+<pre><samp>&gt;&gt;&gt; import MeCab
+&gt;&gt;&gt; s = u'すもももももももものうち'
+&gt;&gt;&gt; tagger = MeCab.Tagger('-r mecabrc')
+&gt;&gt;&gt; result = tagger.parse(s.encode('utf-8'))
+&gt;&gt;&gt; result = result.decode('utf-8')
+&gt;&gt;&gt; print result
+すもも  名詞,一般,*,*,*,*,すもも,スモモ,スモモ
+も      助詞,係助詞,*,*,*,*,も,モ,モ
+もも    名詞,一般,*,*,*,*,もも,モモ,モモ
+も      助詞,係助詞,*,*,*,*,も,モ,モ
+もも    名詞,一般,*,*,*,*,もも,モモ,モモ
+の      助詞,連体化,*,*,*,*,の,ノ,ノ
+うち    名詞,非自立,副詞可能,*,*,*,うち,ウチ,ウチ
+EOS</samp></pre>
 
 
 <p><a href="/">戻る</a></p>
