@@ -1,7 +1,7 @@
 body {
  color: #000;
- background: #FFF  url('../back/moon10-bw.gif') fixed;
- /*background: #000  url('../back/moon11bk_gy.jpg') fixed;*/
+ background: #FFF  url('/back/moon10-bw.gif') fixed;
+ /*background: #000  url('/back/moon11bk_gy.jpg') fixed;*/
  background-repeat: repeat-y;
  padding-left: 120px;
 }
