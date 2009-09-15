@@ -29,6 +29,10 @@ p {
  line-height: 130%;
 }
 
+pre {
+ margin: 1em 2em;
+}
+
 address {
  margin: 1em 1em;
 }
