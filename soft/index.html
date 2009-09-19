@@ -8,46 +8,38 @@
 <meta http-equiv="Content-Style-Type" content="text/css" />
 
 <link rel="Stylesheet" type="text/css" href="/css/shun.css" />
-<title>ソフトウェア置き場</title>
+<title>ソフトウェア</title>
 </head>
 
-<h1>ソフトウェア置き場</h1>
+<h1>ソフトウェア</h1>
 <h2>自作 Python ライブラリ</h2>
-<h3>aquestalk_py</h3>
+<h3 id="aquestalk_py">aquestalk_py</h3>
 <p><a href="http://www.a-quest.com/aquestalk/">Aquestalk Win 版</a>を Python から使用します。</p>
 <ul>
-    <li><a href="aquestalk_py/aquestalk_py_0_1.zip">Aquestalk_py Version 0.1</a></li>
+    <li><a href="aquestalk_py/aquestalk_py_0_1.zip">Aquestalk_py Version 0.1</a> (2008/11/8)</li>
 </ul>
 
-<h3>reflexa_py</h3>
+<h3 id="reflexa_py">reflexa_py</h3>
 <p><a href="http://labs.preferred.jp/reflexa/">連想検索エンジン Reflexa</a> を Python から使用します。</p>
 <ul>
-    <li><a href="reflexa_py/reflexa_py_0_3_1.zip">reflexa_py Version 0.3.1</a></li>
+    <li><a href="reflexa_py/reflexa_py_0_3_1.zip">reflexa_py Version 0.3.1</a> (2008/9/8)</li>
 </ul>
 
-<h3>PyAviUtlControl</h3>
-<p>あじ氏の「<a href="http://www.geocities.jp/aji_0/">AviUtl Control</a> ver1.4」を使用することで AviUtl を Python から操作します。</p>
+<h3 id="PyAviUtlControl">PyAviUtlControl</h3>
+<p>あじ氏の「<a href="http://www.geocities.jp/aji_0/">AviUtl Control</a> ver1.4」を使用することで <a href="http://spring-fragrance.mints.ne.jp/aviutl/">AviUtl</a> を Python から操作します。</p>
 <ul>
-    <li><a href="aviutl/pyauc_ver11.zip">PyAviUtlControl Version 1.1</a></li>
-    <li><a href="aviutl/pyauc_ver10.zip">PyAviUtlControl Version 1.0</a></li>
+    <li><a href="aviutl/pyauc_ver11.zip">PyAviUtlControl Version 1.1</a> (2009/9/15)</li>
+    <li><a href="aviutl/pyauc_ver10.zip">PyAviUtlControl Version 1.0</a> (2009/9/13)</li>
 </ul>
-
-<h3>PyAviUtl</h3>
-<p>AviUtl を Python から操作します。 PyAviUtlControl との違いはこれ単体で動作するということです。</p>
-<p>あじ氏の「<a href="http://www.geocities.jp/aji_0/">AviUtl Control</a> ver1.4」のソースコードを参考に作成しています。できあがったばかりのものであり 、動作確認が済んでいません。</p>
-<ul>
-    <li><a href="aviutl/pyaviutl_ver01alpha.zip">PyAviUtl Version 0.1alpha</a></li>
-</ul>
-
 
 <h2>その他</h2>
-<h3>mecab-python 0.98pre3 の Windows 用バイナリ</h3>
+<h3 id="MeCabPython098pre3">mecab-python 0.98pre3 の Windows 用バイナリ</h3>
 <p>Windows XP にて <a href="http://mecab.sourceforge.net/">MeCab</a> 0.98pre3 の Python バインディングをコンパイルしてみました。</p>
 <ul>
-    <li><a href="mecab-python/libmecab-1-mecab-0.98pre3.zip">libmecab-1.dll</a></li>
-    <li><a href="mecab-python/mecab-python-0.98pre3-python254.zip">mecab-python Python 2.5.4 用</a></li>
-<li><a href="mecab-python/mecab-python-0.98pre3-python262.zip">mecab-python Python 2.6.2 用</a></li>
-    <li><a href="mecab-python/mecab-ipadic-2.7.0-20070801.zip">IPA辞書(UTF-8)</a></li>
+    <li><a href="mecab-python/libmecab-1-mecab-0.98pre3.zip">libmecab-1.dll</a> (2009/9/10)</li>
+    <li><a href="mecab-python/mecab-python-0.98pre3-python254.zip">mecab-python Python 2.5.4 用</a> (2009/9/10)</li>
+<li><a href="mecab-python/mecab-python-0.98pre3-python262.zip">mecab-python Python 2.6.2 用</a> (2009/9/10)</li>
+    <li><a href="mecab-python/mecab-ipadic-2.7.0-20070801.zip">IPA辞書(UTF-8)</a> (2009/9/10)</li>
 </ul>
 <p>libmecab.dll, mecab-python, IPA 辞書の3つと mecabrc を組にして使ってください。 mecabrc は空のファイルでかまいませんが、辞書を指定しておくと便利です。</p>
 <pre><code>dicdir = ipadic</code></pre>
@@ -66,6 +58,18 @@
 の      助詞,連体化,*,*,*,*,の,ノ,ノ
 うち    名詞,非自立,副詞可能,*,*,*,うち,ウチ,ウチ
 EOS</samp></pre>
+
+<h3 id="PyAviUtlLib">PyAviUtlLib</h3>
+<p>Python の ctypes モジュールや Python/C API の勉強のために作成したものです。動機が不純（AviUtl を操りたい、ではない）であり、まともな動作は期待できません。 PyAviUtlControl のほうを使用してください。</p>
+<p><a href="http://spring-fragrance.mints.ne.jp/aviutl/">AviUtl</a> を Python から操作します。 PyAviUtlControl との違いはこれ単体で動作するということです。</p>
+<p>あじ氏の「<a href="http://www.geocities.jp/aji_0/">AviUtl Control</a> ver1.4」のソースコードを参考に作成しています。</p>
+<p>内容は ctypes モジュールを使用した aviutllib.py と Python/C API を用いた caviutllib.c の 2 つです。最初にできたのは aviutllib.py で、これを C 言語に再移植してできたのが caviutllib.c です。</p>
+<p>caviutllib.c のコンパイルは Visual C++ 2008 Express Edition と MinGW(gcc 3.4.5) で確認しています。ソースは BOM 付の UTF-8 で書かれているので MinGW でコンパイルする場合は BOM を削除してください。
+</p>
+<ul>
+    <li><a href="aviutl/pyaviutllib_ver01beta.zip">PyAviUtlLib Version 0.1beta</a> (2009/9/20)</li>
+    <li><a href="aviutl/pyaviutllib_ver01alpha.zip">PyAviUtlLib Version 0.1alpha</a> (2009/9/17)</li>
+</ul>
 
 
 <p><a href="/">戻る</a></p>
