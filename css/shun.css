@@ -7,38 +7,42 @@ body {
 }
 
 h1 {
+ margin: 0.5em 0em;
  font-size: 200%;
  font-style: italic;
  text-align: left;
 }
 
 h2 {
+ margin: 0.3em 0.5em;
  font-size: 135%;
 }
 
 h3 {
+ margin: 0.2em 1em;
  font-size: 115%;
 }
 
 h4 {
+ margin: 0.1em 1.5em;
  font-size: 100%;
 }
 
 p {
- margin: 1em 1em;
+ margin: 1em 2em;
  line-height: 130%;
 }
 
 pre {
- margin: 1em 2em;
+ margin: 1em 2.5em;
 }
 
 address {
- margin: 1em 1em;
+ margin: 1em 2em;
 }
 
 p.link {
- margin: 1em 1em; 
+ margin: 1em 2em; 
 }
 
 a:link {
@@ -54,7 +58,7 @@ a:link:hover, a:visited:hover {
 }
 
 li {
- margin: 0.3em 1em;
+ margin: 0.3em 2em;
  line-height: 110%;
 }
 
