@@ -26,6 +26,39 @@
     <li><a href="reflexa_py/reflexa_py_0_3_1.zip">Reflexa_py Version 0.3.1</a> (2008/9/8)</li>
 </ul>
 
+<h3 id="sholiday">sholiday.py</h3>
+<p>祝日を判定する<a href="http://www.h3.dion.ne.jp/~sakatsu/holiday_logic5.htm#Python">jholiday.py</a> の私的改造版です。</p>
+<h4>変更点</h4>
+<p>引数に datetime.date オブジェクトを受け取る holiday_name_date 関数を追加しました。Python 3 系でも 2to3.py で変換すれば使えるようにしました。ある期間（デフォルトは2001年から2020年の間）の祝日をキャッシュし、期間内ならば速度が上がるようにしました。</p>
+<ul>
+    <li><a href="sholiday/sholiday-1.1.4.zip">sholiday.py Version 1.1.4</a> (2009/11/19)</li>
+</ul>
+
+<h3 id="cjholiday">cjholiday</h3>
+<p>祝日を判定する<a href="http://www.h3.dion.ne.jp/~sakatsu/holiday_logic5.htm#Python">jholiday.py</a> の C エクステンション版です。</p>
+<h4>変更点</h4>
+<p>コンパイルが必要な代わりに Pure Python よりも速度が速くなっています。引数に datetime.date オブジェクトを受け取る holiday_name_date 関数を追加しました。</p>
+<ul>
+    <li><a href="cjholiday/cjholiday-1.0.1.zip">cjholiday.py Version 1.0.1 ソース</a> (2009/11/19)</li>
+    <li><a href="cjholiday/cjholiday-1.0.1.win32-py2.6.zip">cjholiday.py Version 1.0.1 Windows Python 2.6 用バイナリ</a> (2009/11/19)</li>
+</ul>
+
+<h3 id="qreki_py">qreki.py</h3>
+<p>旧暦および六曜を算出します。オリジナルは<a href="http://www.vector.co.jp/soft/dos/personal/se016093.html">QREKI.AWK</a> です。</p>
+<ul>
+    <li><a href="qreki_py/qreki-0.4.4.zip">qreki.py Version 0.4.4</a> (2009/11/28)</li>
+</ul>
+
+<h4>使用法</h4>
+<pre>
+&gt;&gt;&gt; from qreki import Kyureki
+&gt;&gt;&gt; k = Kyureki.from_ymd(2009, 11, 27)
+&gt;&gt;&gt; print k
+2009年10月11日
+&gt;&gt;&gt; print k.rokuyou()
+友引
+</pre>
+
 <h3 id="PyAviUtlControl">PyAviUtlControl (pyauc.py)</h3>
 <p>あじ氏の「<a href="http://www.geocities.jp/aji_0/">AviUtl Control</a> ver1.4」を使用することで <a href="http://spring-fragrance.mints.ne.jp/aviutl/">AviUtl</a> を Python から操作します。</p>
 <ul>
