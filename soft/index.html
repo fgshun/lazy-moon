@@ -46,8 +46,12 @@
 <h3 id="qreki_py">qreki.py</h3>
 <p>旧暦および六曜を算出します。オリジナルは <a href="http://www.vector.co.jp/soft/dos/personal/se016093.html">QREKI.AWK</a> です。</p>
 <ul>
+    <li><a href="qreki_py/qreki-0.4.6.zip">qreki.py Version 0.4.6</a> (2009/12/1)</li>
+    <li><a href="qreki_py/qreki-0.4.5.zip">qreki.py Version 0.4.5</a> (2009/11/30)</li>
     <li><a href="qreki_py/qreki-0.4.4.zip">qreki.py Version 0.4.4</a> (2009/11/28)</li>
 </ul>
+
+<p>qreki.py のみで動作します。しかし、 setup.py build を行って _qreki C 拡張をコンパイルすることで、より高速の動作が可能となります。</p>
 
 <h4>使用法</h4>
 <pre>
@@ -66,6 +70,49 @@
     <li><a href="aviutl/pyauc_ver11.zip">PyAviUtlControl Version 1.1</a> (2009/9/15)</li>
     <li><a href="aviutl/pyauc_ver10.zip">PyAviUtlControl Version 1.0</a> (2009/9/13)</li>
 </ul>
+
+<h3 id="kensiroulib">KensirouLib</h3>
+<p>ケンシロウ進数の習得補助ライブラリ。あたたたたたたた。</p>
+<p><a href="http://www.asahi-net.or.jp/~RC4T-ISHR/kensiro.html">「ケンシロウ進数」</a>、<a href="http://fumisa.haun.org/glossary/hokuto-radix.html">「ケンシロウ進数2」</a>、<a href="http://msuzuki-program.hp.infoseek.co.jp/MEMO/MEMOC.html#20011126">「ケンシロウ進数ランレングス圧縮版」</a>をあつかうジョークライブラリです。通常は正整数に対して用いるものですが、独自解釈で、バイト列も扱えるようにしています。</p>
+<ul>
+    <li><a href="kensiroulib/kensiroulib-1.0.zip">KensirouLib Version 1.0</a> (2009/12/14)</li>
+    <li><a href="kensiroulib/kensiroulib-1.0.win32-py2.6.zip">KensirouLib Version 1.0 Windows Python 2.6 用バイナリ</a> (2009/12/14)</li>
+</ul>
+
+<h4>使用方法</h4>
+<pre>
+&gt;&gt;&gt; import kensiroulib.ver1 as ver1
+&gt;&gt;&gt; s = ver1.encode_int(128)
+&gt;&gt;&gt; print s
+あたたたたたたた
+&gt;&gt;&gt; ver1.decode_int(s)
+128
+&gt;&gt;&gt; s = ver1.encode('kensirou')
+&gt;&gt;&gt; print s
+たああたあたああたああたたあたあたああたあああたたあああたたああたああたあたたあ
+たあああたたあたたああたああああたあああたあたあ
+&gt;&gt;&gt; ver1.decode(s)
+'kensirou'
+</pre>
+
+<h3 id="smithnumber">smithnumber.py</h3>
+<p><a href="http://ja.wikipedia.org/wiki/%E3%82%B9%E3%83%9F%E3%82%B9%E6%95%B0">スミス数</a>の算出を行うライブラリ。スミス数のバリエーションとしては <a href="http://www.shyamsundergupta.com/smith.htm">http://www.shyamsundergupta.com/smith.htm</a> （英語）が詳しい。</p>
+<ul>
+    <li><a href="smithnumber/smithnumber-1.0.zip">smithnumber.py Version 1.0</a> (2010/3/23)</li>
+</ul>
+
+<h4>使用方法</h4>
+<pre>
+&gt;&gt;&gt; from smithnumber import smith_numbers
+&gt;&gt;&gt; for n in smith_numbers():
+...   if n &gt; 30:
+...     break
+...   n
+...
+4
+22
+27
+</pre>
 
 <h2>その他</h2>
 <h3 id="MeCabPython">形態素解析エンジン MeCab Python バインディングの Windows バイナリ</h3>
