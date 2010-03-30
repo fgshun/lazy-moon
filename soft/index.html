@@ -50,7 +50,7 @@
 </ul>
 
 <h3 id="sholiday">sholiday.py</h3>
-<p>祝日を判定する <a href="http://www.h3.dion.ne.jp/~sakatsu/holiday_logic5.htm#Python">jholiday.py</a> の私的改造版です。</p>
+<p>日本の祝日を判定する <a href="http://www.h3.dion.ne.jp/~sakatsu/holiday_logic5.htm#Python">jholiday.py</a> の私的改造版です。</p>
 <h4>変更点</h4>
 <p>引数に datetime.date オブジェクトを受け取る holiday_name_date 関数を追加しました。Python 3 系でも 2to3.py で変換すれば使えるようにしました。ある期間（デフォルトは2001年から2020年の間）の祝日をキャッシュし、期間内ならば速度が上がるようにしました。</p>
 <ul>
@@ -58,7 +58,7 @@
 </ul>
 
 <h3 id="cjholiday">cjholiday</h3>
-<p>祝日を判定する <a href="http://www.h3.dion.ne.jp/~sakatsu/holiday_logic5.htm#Python">jholiday.py</a> の C エクステンション版です。</p>
+<p>日本の祝日を判定する <a href="http://www.h3.dion.ne.jp/~sakatsu/holiday_logic5.htm#Python">jholiday.py</a> の C エクステンション版です。</p>
 <h4>変更点</h4>
 <p>コンパイルが必要な代わりに Pure Python よりも速度が速くなっています。引数に datetime.date オブジェクトを受け取る holiday_name_date 関数を追加しました。</p>
 <ul>
@@ -74,7 +74,7 @@
     <li><a href="qreki_py/qreki-0.4.4.zip">qreki.py Version 0.4.4</a> (2009/11/28)</li>
 </ul>
 
-<p>qreki.py のみで動作します。しかし、 setup.py build を行って _qreki C 拡張をコンパイルすることで、より高速の動作が可能となります。</p>
+<p>qreki.py ファイルのみで動作させることができます。しかし、 setup.py build を行って _qreki C エクステンションをビルドすることで、より高速の動作が可能となります。</p>
 
 <h4>使用法</h4>
 <pre>
@@ -119,8 +119,8 @@
 </pre>
 
 <h3 id="smithnumber">smithnumber.py</h3>
-<p><a href="http://ja.wikipedia.org/wiki/%E3%82%B9%E3%83%9F%E3%82%B9%E6%95%B0">スミス数</a>の算出を行うライブラリ。スミス数のバリエーションとしては <a href="http://www.shyamsundergupta.com/smith.htm">http://www.shyamsundergupta.com/smith.htm</a> （英語）が詳しい。</p>
-<p>Python 2.6.4 にて動作確認。 version 1.0.1 は Python 2.5.4 でも動作確認。 version 1.0.2 は Python 2.4.4 でも動作確認。</p>
+<p><a href="http://ja.wikipedia.org/wiki/%E3%82%B9%E3%83%9F%E3%82%B9%E6%95%B0">スミス数</a>という数を扱うためのライブラリです。素数などの有名な数と比べると遊びの域を出ないものではあります。このライブラリでは <a href="http://www.shyamsundergupta.com/smith.htm">http://www.shyamsundergupta.com/smith.htm</a> （英語）にて紹介されているスミス数の判定および、スミス数列の生成をおこなうことができます。</p>
+<p>Python 2.6.4 にて動作確認しています。 version 1.0.1 にて Python 2.5.4 でも動作するよう修正しました。 version 1.0.2 にて Python 2.4.4 でも動作するように修正しました。</p>
 <ul>
     <li><a href="smithnumber/smithnumber-1.1.zip">smithnumber.py Version 1.1</a> (2010/3/24)</li>
     <li><a href="smithnumber/smithnumber-1.0.3.zip">smithnumber.py Version 1.0.3</a> (2010/3/23)</li>
