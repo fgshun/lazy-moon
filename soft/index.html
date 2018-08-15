@@ -1,19 +1,48 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<!doctype html>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-
-<html xml:lang="ja" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="ja">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta charset="UTF-8">
 
-<link rel="Stylesheet" type="text/css" href="/css/shun.css" />
+<link rel="Stylesheet" type="text/css" href="/css/shun.css">
 <title>ソフトウェア</title>
 </head>
 
 <h1>ソフトウェア</h1>
 <hr/>
 <h2>自作 Python ライブラリ</h2>
+<hr/>
+<h3 id="cjholiday">cjholiday</h3>
+<p>日本の祝日を判定する <a href="http://addinbox.sakura.ne.jp/holiday_logic5.htm#Python">jholiday.py</a> の C エクステンション版です。</p>
+<ul>
+    <li><a href="https://github.com/fgshun/cjholiday">GitHub</a></li>
+</ul>
+
+<pre>
+&gt;&gt;&gt; import cjholiday
+&gt;&gt;&gt; cjholiday.holiday_name(2020, 7, 24)
+'スポーツの日'
+</pre>
+
+<hr/>
+<h3 id="qreki_py">qreki.py</h3>
+<p>旧暦および六曜を算出します。オリジナルは <a href="http://www.vector.co.jp/soft/dos/personal/se016093.html">QREKI.AWK</a> です。</p>
+
+<p>qreki.py ファイルのみで動作させることができます。しかし、 setup.py build を行って _qreki C エクステンションをビルドすることで、より高速の動作が可能となります。</p>
+<ul>
+    <li><a href="https://github.com/fgshun/qreki_py">GitHub</a></li>
+</ul>
+
+<h4>使用法</h4>
+<pre>
+&gt;&gt;&gt; from qreki import Kyureki
+&gt;&gt;&gt; k = Kyureki.from_ymd(2009, 11, 27)
+&gt;&gt;&gt; print k
+2009年10月11日
+&gt;&gt;&gt; print k.rokuyou()
+友引
+</pre>
+
 <hr/>
 <h3 id="aquestalk_py">aquestalk.py</h3>
 <p><a href="http://www.a-quest.com/products/aquestalk2.html">AquesTalk2 Win</a>および<a href="http://www.a-quest.com/products/aquestalk.html">Aquestalk Win</a>を Python から使用します。</p>
@@ -22,7 +51,6 @@
 </ul>
 <ul>
     <li><a href="aquestalk_py/aquestalk_py-0.1.1.zip">aquestalk.py Version 0.1.1</a> (2010/3/26)</li>
-    <li><a href="aquestalk_py/aquestalk_py-0.1.zip">aquestalk.py Version 0.1</a> (2008/11/8)</li>
 </ul>
 
 <h4>使用例</h4>
@@ -45,129 +73,18 @@
 </pre>
 
 <hr/>
-<h3 id="reflexa_py">reflexa.py</h3>
-<p><a href="http://labs.preferred.jp/reflexa/">連想検索エンジン Reflexa</a> を Python から使用します。</p>
-<ul>
-    <li><a href="reflexa_py/reflexa_py_0_3_2.zip">reflexa.py Version 0.3.2</a> (2009/9/20)</li>
-    <li><a href="reflexa_py/reflexa_py_0_3_1.zip">reflexa.py Version 0.3.1</a> (2008/9/8)</li>
-</ul>
-
-<hr/>
-<h3 id="sholiday">sholiday.py</h3>
-<p>日本の祝日を判定する <a href="http://www.h3.dion.ne.jp/~sakatsu/holiday_logic5.htm#Python">jholiday.py</a> の<del>私的改造版</del>ラッパーです。</p>
-<h4>変更点</h4>
-<p>ある期間（デフォルトは2001年から2020年の間）の祝日をキャッシュし、期間内ならば速度が上がるようにしました。</p>
-<ul>
-    <li><a href="sholiday/sholiday-1.2.zip">sholiday.py Version 1.2</a> (2014/9/14)</li>
-    <!--<li><a href="sholiday/sholiday-1.1.4.zip">sholiday.py Version 1.1.4</a> (2009/11/19)</li>-->
-</ul>
-
-<hr/>
-<h3 id="cjholiday">cjholiday</h3>
-<p>日本の祝日を判定する <a href="http://www.h3.dion.ne.jp/~sakatsu/holiday_logic5.htm#Python">jholiday.py</a> の C エクステンション版です。</p>
-<h4>Python 3</h4>
-<p>Python 3.4.1 で動作確認。 3.3 でも動くかもしれません。</p>
-<ul>
-    <li><a href="cjholiday/cjholiday3-1.0.3.zip">cjholiday Version 1.0.3 ソース</a> (2014/9/21)</li>
-    <li><a href="cjholiday/cjholiday-1.0.3.win-amd64-py3.4.zip">cjholiday Version 1.0.3 Windows Python 3.4 (64bit) 用バイナリ</a> (2014/9/21)</li>
-    <li><a href="cjholiday/cjholiday-1.0.3.win32-py3.4.zip">cjholiday Version 1.0.3 Windows Python 3.4 (32bit) 用バイナリ</a> (2014/9/21)</li>
-</ul>
-<h4>Python 2</h4>
-<ul>
-    <li><a href="cjholiday/cjholiday-1.0.3.zip">cjholiday Version 1.0.3 ソース</a> (2014/9/15)</li>
-    <li><a href="cjholiday/cjholiday-1.0.3.win-amd64-py2.7.zip">cjholiday Version 1.0.3 Windows Python 2.7 (64bit) 用バイナリ</a> (2014/9/15)</li>
-    <li><a href="cjholiday/cjholiday-1.0.3.win32-py2.7.zip">cjholiday Version 1.0.3 Windows Python 2.7 (32bit) 用バイナリ</a> (2014/9/15)</li>
-    <li><a href="cjholiday/cjholiday-1.0.2.zip">cjholiday Version 1.0.2 ソース</a> (2010/4/23)</li>
-    <li><a href="cjholiday/cjholiday-1.0.2.win32-py2.6.zip">cjholiday Version 1.0.2 Windows Python 2.6 用バイナリ</a> (2010/4/23)</li>
-    <li><a href="cjholiday/cjholiday-1.0.1.zip">cjholiday Version 1.0.1 ソース</a> (2009/11/19)</li>
-    <li><a href="cjholiday/cjholiday-1.0.1.win32-py2.6.zip">cjholiday Version 1.0.1 Windows Python 2.6 用バイナリ</a> (2009/11/19)</li>
-</ul>
-
-<hr/>
-<h3 id="qreki_py">qreki.py</h3>
-<p>旧暦および六曜を算出します。オリジナルは <a href="http://www.vector.co.jp/soft/dos/personal/se016093.html">QREKI.AWK</a> です。</p>
-<ul>
-    <li><a href="qreki_py/qreki-0.4.6.zip">qreki.py Version 0.4.6</a> (2009/12/1)</li>
-    <li><a href="qreki_py/qreki-0.4.5.zip">qreki.py Version 0.4.5</a> (2009/11/30)</li>
-    <li><a href="qreki_py/qreki-0.4.4.zip">qreki.py Version 0.4.4</a> (2009/11/28)</li>
-</ul>
-
-<p>qreki.py ファイルのみで動作させることができます。しかし、 setup.py build を行って _qreki C エクステンションをビルドすることで、より高速の動作が可能となります。</p>
-
-<h4>使用法</h4>
-<pre>
-&gt;&gt;&gt; from qreki import Kyureki
-&gt;&gt;&gt; k = Kyureki.from_ymd(2009, 11, 27)
-&gt;&gt;&gt; print k
-2009年10月11日
-&gt;&gt;&gt; print k.rokuyou()
-友引
-</pre>
-
-<hr/>
 <h3 id="PyAviUtlControl">PyAviUtlControl (pyauc.py)</h3>
 <p>あじ氏の「<a href="http://www.geocities.jp/aji_0/">AviUtl Control</a> ver1.4」を使用することで <a href="http://spring-fragrance.mints.ne.jp/aviutl/">AviUtl</a> を Python から操作します。</p>
 <ul>
     <li><a href="aviutl/pyauc_ver12.zip">PyAviUtlControl Version 1.2</a> (2009/9/20)</li>
-    <li><a href="aviutl/pyauc_ver11.zip">PyAviUtlControl Version 1.1</a> (2009/9/15)</li>
-    <li><a href="aviutl/pyauc_ver10.zip">PyAviUtlControl Version 1.0</a> (2009/9/13)</li>
 </ul>
 
-<hr/>
-<h3 id="kensiroulib">KensirouLib</h3>
-<p>ケンシロウ進数の習得補助ライブラリ。あたたたたたたた。</p>
-<p><a href="http://www.asahi-net.or.jp/~RC4T-ISHR/kensiro.html">「ケンシロウ進数」</a>、<a href="http://fumisa.haun.org/glossary/hokuto-radix.html">「ケンシロウ進数2」</a>、<a href="http://msuzuki-program.hp.infoseek.co.jp/MEMO/MEMOC.html#20011126">「ケンシロウ進数ランレングス圧縮版」</a>をあつかうジョークライブラリです。通常は正整数に対して用いるものですが、独自解釈で、バイト列も扱えるようにしています。</p>
-<ul>
-    <li><a href="kensiroulib/kensiroulib-1.0.zip">KensirouLib Version 1.0</a> (2009/12/14)</li>
-    <li><a href="kensiroulib/kensiroulib-1.0.win32-py2.6.zip">KensirouLib Version 1.0 Windows Python 2.6 用バイナリ</a> (2009/12/14)</li>
-</ul>
-
-<h4>使用方法</h4>
-<pre>
-&gt;&gt;&gt; import kensiroulib.ver1 as ver1
-&gt;&gt;&gt; s = ver1.encode_int(128)
-&gt;&gt;&gt; print s
-あたたたたたたた
-&gt;&gt;&gt; ver1.decode_int(s)
-128
-&gt;&gt;&gt; s = ver1.encode('kensirou')
-&gt;&gt;&gt; print s
-たああたあたああたああたたあたあたああたあああたたあああたたああたああたあたたあ
-たあああたたあたたああたああああたあああたあたあ
-&gt;&gt;&gt; ver1.decode(s)
-'kensirou'
-</pre>
-
-<hr/>
-<h3 id="smithnumber">smithnumber.py</h3>
-<p><a href="http://ja.wikipedia.org/wiki/%E3%82%B9%E3%83%9F%E3%82%B9%E6%95%B0">スミス数</a>という数を扱うためのライブラリです。素数などの有名な数と比べると遊びの域を出ないものではあります。このライブラリでは <a href="http://www.shyamsundergupta.com/smith.htm">http://www.shyamsundergupta.com/smith.htm</a> （英語）にて紹介されているスミス数の判定および、スミス数列の生成をおこなうことができます。</p>
-<p>Python 2.6.4 にて動作確認しています。 version 1.0.1 にて Python 2.5.4 でも動作するよう修正しました。 version 1.0.2 にて Python 2.4.4 でも動作するように修正しました。</p>
-<ul>
-    <li><a href="smithnumber/smithnumber-1.1.zip">smithnumber.py Version 1.1</a> (2010/3/24)</li>
-    <li><a href="smithnumber/smithnumber-1.0.3.zip">smithnumber.py Version 1.0.3</a> (2010/3/23)</li>
-    <li><a href="smithnumber/smithnumber-1.0.2.zip">smithnumber.py Version 1.0.2</a> (2010/3/23)</li>
-    <li><a href="smithnumber/smithnumber-1.0.1.zip">smithnumber.py Version 1.0.1</a> (2010/3/23)</li>
-    <li><a href="smithnumber/smithnumber-1.0.zip">smithnumber.py Version 1.0</a> (2010/3/23)</li>
-</ul>
-
-<h4>使用方法</h4>
-<pre>
-&gt;&gt;&gt; from smithnumber import smith_numbers
-&gt;&gt;&gt; for n in smith_numbers():
-...   if n &gt; 30:
-...     break
-...   n
-...
-4
-22
-27
-</pre>
 
 <hr/>
 <h2>その他</h2>
 <hr/>
 <h3 id="MeCabPython">形態素解析エンジン MeCab Python バインディングの Windows バイナリ</h3>
-<p>Windows XP の MinGW を用いて <a href="http://mecab.sourceforge.net/">MeCab</a> の Python バインディングをコンパイルしてみました。</p>
+<p>Windows XP の MinGW を用いて <a href="http://mecab.sourceforge.net/">MeCab</a> の Python 2 バインディングをコンパイルしてみました。</p>
 <ul>
     <li>MeCab 0.98
         <ul>
@@ -192,8 +109,7 @@
     </li>
     <li>辞書
         <ul>
-            <li><a href="mecab-python/mecab-ipadic-2.7.0-20070801.zip">IPA辞書(UTF-8)(zip 圧縮 12.4MB)</a> (2009/9/10)</li>
-            <li><a href="mecab-python/mecab-ipadic-2.7.0-20070801.7z">IPA辞書(UTF-8)(7zip 圧縮 8.8MB)</a> (2009/9/10)</li>
+            <li><a href="mecab-python/mecab-ipadic-2.7.0-20070801.zip">IPA辞書(UTF-8)</a> (2009/9/10)</li>
         </ul>
     </li>
 </ul>
@@ -214,20 +130,6 @@
 の      助詞,連体化,*,*,*,*,の,ノ,ノ
 うち    名詞,非自立,副詞可能,*,*,*,うち,ウチ,ウチ
 EOS</samp></pre>
-
-<hr/>
-<h3 id="PyAviUtlLib">PyAviUtlLib</h3>
-<p>Python の ctypes モジュールや Python/C API の勉強のために作成したものです。動機が不純（AviUtl を操りたい、ではない）であり、動作チェックはしているうちにはいりません。まともな動作は期待できません。 PyAviUtlControl のほうを使用してください。</p>
-<p><a href="http://spring-fragrance.mints.ne.jp/aviutl/">AviUtl</a> を Python から操作します。 PyAviUtlControl との違いはこれ単体で動作するということです。</p>
-<p>あじ氏の「<a href="http://www.geocities.jp/aji_0/">AviUtl Control</a> ver1.4」のソースコードを参考に作成しています。</p>
-<p>内容は ctypes モジュールを使用した aviutllib.py と Python/C API を用いた caviutllib.c の 2 つです。最初にできたのは aviutllib.py で、これを C 言語に再移植してできたのが caviutllib.c です。</p>
-<p>caviutllib.c のコンパイルは Visual C++ 2008 Express Edition と MinGW(gcc 3.4.5) で確認しています。ソースは BOM 付の UTF-8 で書かれているので MinGW でコンパイルする場合は BOM を削除してください。
-</p>
-<ul>
-    <li><a href="aviutl/pyaviutllib_ver01beta.zip">PyAviUtlLib Version 0.1beta</a> (2009/9/20)</li>
-    <li><a href="aviutl/pyaviutllib_ver01alpha.zip">PyAviUtlLib Version 0.1alpha</a> (2009/9/17)</li>
-</ul>
-
 
 <p><a href="/">戻る</a></p>
 </body>
