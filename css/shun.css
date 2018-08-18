@@ -44,10 +44,6 @@ pre {
  background: #dcdcdc;
 }
 
-li {
- line-height: 110%;
-}
-
 table {
  empty-cells: show;
  border-collapse: collapse;
